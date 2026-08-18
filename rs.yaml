@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ReplicaSet
+metadata:
+  name: my-rs
+  lables:
+    app: rs
+spec:
+  replicas: 2
+  selector:
+    matchLables:
+      app: rs
+  template:
+    metadata:
+      lables:
+        app: rs
+    spec:
+      containers:
+        -name: nginx-cont
+        image: nginx:latest
+        ports:
+          -containerPort: 80
