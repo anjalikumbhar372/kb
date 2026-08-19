@@ -2,19 +2,19 @@ apiVersion: apps/v1
 kind: DaemonSet
 metadata:
   name: my-daemon
-  lables:
+  labels:
     app: daemon
 spec:
   selector:
-    matchLables:
+    matchLabels:
       app: daemon
   template:
     metadata:
-      lables:
+      labels:
         app: daemon
     spec: 
       containers:
-        -name: daemon-container
-        image: amazon/cloudwatch-agent
-        ports:
-          -containerport: 80
+        - name: daemon-container
+          image: amazon/cloudwatch-agent
+          ports:
+            - containerPort: 80
