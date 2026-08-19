@@ -15,6 +15,6 @@ spec:
       image: nginx:latest
       ports:
         - containerPort: 80
-  nodeselector:
+  nodeSelector:
     type: frontend
   
