@@ -3,7 +3,7 @@ kind: pod
 metadata:
   name: mypod
   labels:
-    app: my-app
+    app: myapp
 spec:
   tolerations:
     - key: "prod"
@@ -15,5 +15,4 @@ spec:
       image: nginx:latest
       ports:
         - containerPort: 80
-  nodeSelector:
-    type: "frontend"
+  
