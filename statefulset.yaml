@@ -13,18 +13,18 @@ spec:
     metadata:
       labels:
         app: ss
-  spec:
-    containers:
-      - name: mysql-container
-        image: mysql:8.0
-        ports:
-          - containerPort: 3306
-        env:
-          - name: MYSQL_ROOT_PASSWORD
-            value: "root"
-          - name: MYSQL_USER
-            value: "admin"
-          - name: MYSQL_PASSWORD
-            value: "admin"
-          - name: MYSQL_DATABASE
-            value: "student_db"
+    spec:
+      containers:
+        - name: mysql-container
+          image: mysql:8.0
+          ports:
+            - containerPort: 3306
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              value: "root"
+            - name: MYSQL_USER
+              value: "admin"
+            - name: MYSQL_PASSWORD
+              value: "admin"
+            - name: MYSQL_DATABASE
+              value: "student_db"
